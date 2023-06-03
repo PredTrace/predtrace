@@ -96,9 +96,9 @@ SELECT * FROM temp_table_q10 where c_custkey = 57040 and c_name = 'Customer#0000
 	-- nation
 
 /* query on order, customer, lineitem tables */
-SELECT * FROM nation where n_name = 'JAPAN'; /* 0.400 ms */
-SELECT * FROM orders where o_orderkey IN (SELECT o_orderkey FROM temp_table_q10 where c_custkey = 57040 and c_name = 'Customer#000057040' and c_acctbal = 632.87 and n_name = 'JAPAN' and c_address = 'Eioyzjf4pp' and c_phone = '22-895-641-3466'); /* 16.192 ms */
-SELECT * from customer where c_custkey = 57040;/*  0.373 ms */ 
+SELECT * FROM nation where n_name = 'JAPAN'; 
+SELECT * FROM orders where o_orderkey IN (SELECT o_orderkey FROM temp_table_q10 where c_custkey = 57040 and c_name = 'Customer#000057040' and c_acctbal = 632.87 and n_name = 'JAPAN' and c_address = 'Eioyzjf4pp' and c_phone = '22-895-641-3466'); 
+SELECT * from customer where c_custkey = 57040;
 SELECT * from lineitem where l_linenumber IN (SELECT l_linenumber FROM temp_table_q10 where c_custkey = 57040 and c_name = 'Customer#000057040' and c_acctbal = 632.87 and n_name = 'JAPAN' and c_address = 'Eioyzjf4pp' and c_phone = '22-895-641-3466') and l_orderkey IN (SELECT l_orderkey FROM temp_table_q10 where c_custkey = 57040 and c_name = 'Customer#000057040' and c_acctbal = 632.87 and n_name = 'JAPAN' and c_address = 'Eioyzjf4pp' and c_phone = '22-895-641-3466');/* 15.939 ms */ 
 
 
