@@ -19,7 +19,7 @@ The following python packages are required to run PredTrace and z3.
 
 <pre><code>python3 evaluate_linage.py NB_8392403/
 </code></pre>
-It will runs the pipeline id NB_8392403 and shows the lineage result for PredTrace and baseline and also their runtime.
+It will run the pipeline id NB_8392403 and show the lineage result for PredTrace and baseline as well as their runtime.
 
 The exampled SQL queries for case study TPCH Q3 is also shown in folder /test/TPCH/example_Q3.
 
